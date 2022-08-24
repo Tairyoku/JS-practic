@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-20</title>
+</head>
+
+<body>
+    <h2>Практика JS 20</h2>
+
+    <div>
+        Необходимо реализовать функцию, которая на входе принимает массив с разными типами данных ==> ['a', 1, 2, false, 'b'], а возвращает объект, в котором эти типы данных рассортированны по ключам. </div>
+    <script>
+        "use strict";
+
+        function mapping(arr) {
+            let maps = new Map();
+            let numbers = [];
+            let booleans = [];
+            let strings = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (/\d+/.test(arr[i])) {
+                    numbers.push(arr[i]);
+                    maps.set("number", numbers);
+                } else if (/true|false/.test(arr[i])) {
+                    booleans.push(arr[i]);
+                    maps.set("boolean", booleans);
+                } else if (/\w+/.test(arr[i])) {
+                    strings.push(arr[i]);
+                    maps.set("string", strings);
+                }
+            }
+            return maps;
+        }
+        mapping(['a', 1, 2, false, 'b']).forEach((value, key, ) => {
+            alert(`${key}: [${value}]`);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-8</title>
+</head>
+
+<body>
+    <h2>Практика JS 8</h2>
+
+    <div>
+        Напишите функцию, которая вычисляет итоговую оценку студента в зависимости от двух параметров: оценки за экзамен и количества выполненных проектов. Ваша функция должна принимать два аргумента: экзамен - оценка за экзамен (от 0 до 100); проекты - количество
+        реализованных проектов (от 0 и выше); Эта функция должна возвращать число (итоговая оценка). Есть четыре типа итоговых оценок:
+    </div>
+    <div>100, если оценка за экзамен больше 90 или количество выполненных проектов больше 10.</div>
+    <div>90, если оценка за экзамен больше 75 или количество выполненных проектов не менее 5.</div>
+    <div>75, если оценка за экзамен больше 50 или количество выполненных проектов не менее 2.</div>
+    <div>0, в остальных случаях</div>
+    <script>
+        function finalGrade(examGrade, numOfProjects) {
+            if (examGrade > 90 || numOfProjects > 10) return 100;
+            else if (examGrade > 75 || numOfProjects > 5) return 90;
+            else if (examGrade > 50 || numOfProjects > 2) return 75;
+            else return 0;
+        }
+        //Проверка
+        alert(finalGrade(100, 12));
+        alert(finalGrade(99, 0));
+        alert(finalGrade(10, 15));
+        alert(finalGrade(85, 5));
+        alert(finalGrade(55, 3));
+        alert(finalGrade(55, 0));
+        alert(finalGrade(20, 2));
+    </script>
+</body>
+
+</html>

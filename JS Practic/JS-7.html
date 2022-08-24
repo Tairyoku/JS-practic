@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-7</title>
+</head>
+
+<body>
+    <h2>Практика JS 7</h2>
+
+    <div>
+        Вес записан в переменную weight. Рекомендацию записывай строкой в переменную recommendation. Если вес до 4 кг (не включая это значение), рекомендация – 'Пора перекусить'. Если вес от 4 кг включительно до 5.5 кг включительно – 'Вес в норме'.Если вес больше
+        5.5 кг – 'Пора на тренировку'. В качестве условий, используй значения weight 1, 3, 4, 5, 10. Рекомендацию выводи в консоль. </div>
+    <script>
+        function weightMaintenance(weight) {
+            if (weight < 4) return 'Пора перекусить';
+            else if (weight >= 4 && weight <= 5.5) return 'Вес в норме';
+            else return 'Пора на тренировку';
+        }
+        let weights = [1, 3, 4, 5, 10];
+        let recomendation;
+        for (let weight of weights) {
+            recomendation = weightMaintenance(weight);
+            console.log(recomendation);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-16</title>
+</head>
+
+<body>
+    <h2>Практика JS 16</h2>
+
+    <div>
+        Напишите функцию, которая принимает в себя строку и число. Верните, в виде массива, только те слова, длинна которых превышает число. </div>
+    <script>
+        function strToArr(str, num) {
+            let a = [];
+            let arr = str.match(/[а-я]+/ig);
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].length > num) {
+                    a.push(arr[i]);
+                }
+            }
+            return a;
+        }
+        alert(strToArr('Над городом облака, коридоры, берега, проспект, река.', 7));
+        alert(strToArr('Сегодня отличный день. С самого утра мы пойдем на озеро, купаться.', 5));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-14</title>
+</head>
+
+<body>
+    <h2>Практика JS 14</h2>
+
+    <div>
+        Удалите n восклицательных знаков в предложении слева направо. n - положительное целое число. </div>
+    <script>
+        function remove(str, num) {
+            for (let i = 1; i <= num; i++) {
+                str = str.replace(/!/, '');
+            }
+            return str;
+        }
+        alert(remove('!!!!fd!!!', 5));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-11</title>
+</head>
+
+<body>
+    <h2>Практика JS 11</h2>
+
+    <div>
+        В этом упражнении должны написать программу, которая будет принимать в качестве параметров два массива целых чисел. Необходимо найти произведение каждого массива, после чего найти разность двух массивов, вне зависимости, какой из них больше. </div>
+    <script>
+        function arrSubtraction(firstarr, secondarr) {
+            return Math.abs(firstarr.reduce((sum, current) => sum * current) -
+                secondarr.reduce((sum, current) => sum * current))
+        }
+        alert(arrSubtraction([9, 7, 2], [5, 2, 2]));
+    </script>
+</body>
+
+</html>

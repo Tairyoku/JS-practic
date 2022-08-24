@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-17</title>
+</head>
+
+<body>
+    <h2>Практика JS 17</h2>
+
+    <div>
+        Уловка, которую я изучил в начальной школе, чтобы определить, делится ли число на три, состоит в том, чтобы сложить все целые числа в числе и разделить полученную сумму на три. Если от деления суммы на три нет остатка, то исходное число также делится
+        на три. Учитывая серию цифр в виде строки, определите, делится ли число, представленное строкой, на три. Примечание: Старайтесь избегать использования оператора % (остаток от деления). Число, которое будет принимать в себя функция - всегда будет
+        строка. </div>
+    <script>
+        "use strict";
+
+        function divisibleByThree(num) {
+            let arr = num.split('').reduce((sum, current) => +sum + +current);
+            let div = 3;
+            let dif = arr / div - Math.floor(arr / div);
+            if (dif == 0) {
+                return true;
+            } else {
+                return false
+            };
+        }
+        alert(divisibleByThree('1236'));
+    </script>
+</body>
+
+</html>

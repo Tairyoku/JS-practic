@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-21</title>
+</head>
+
+<body>
+    <h2>Практика JS 21</h2>
+
+    <div>
+        Дана строка, состоящяя из букв a,b,c. Ваша задача поменять расположение букв a и b, но не трогать c. </div>
+    <script>
+        "use strict";
+
+        function switcheroo(str) {
+            let arr = str.split('');
+            for (let i = 0; i < arr.length; i++) {
+                if (/a/.test(arr[i])) {
+                    arr.splice(i, 1, 'b');
+                } else if (/b/.test(arr[i])) {
+                    arr.splice(i, 1, 'a');
+                }
+            }
+            return arr.join('');
+        }
+        alert(switcheroo('abcabacbac'));
+    </script>
+</body>
+
+</html>

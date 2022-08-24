@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-4-1</title>
+</head>
+
+<body>
+    <h2>Практика JS 4-1</h2>
+
+    <div>
+        Дан массив ['Саша', 'Петя', 'Оксана'], сделайте из него ['Оксанa', 'Олег', 'Саша']. Исходный массив не должен быть изменен.
+        <script>
+            let arr = ['Саша', 'Петя', 'Оксана'];
+            let newarr = arr.slice();
+            newarr.push('Олег');
+            newarr.push(newarr[0]);
+            newarr.splice(0, 2);
+            alert(`Исходный массив: ${arr}`);
+            alert(`Измененный массив: ${newarr}`);
+        </script>
+</body>
+
+</html>

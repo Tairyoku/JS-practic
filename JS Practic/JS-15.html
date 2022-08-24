@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-15</title>
+</head>
+
+<body>
+    <h2>Практика JS 15</h2>
+
+    <div>
+        Вы должны реализовать функцию, которая возвращает разницу между наибольшим и наименьшим значением в списке , полученном в качестве аргумента функции. Массив, который получает функция в качестве аргумента, может содержать положительные и отрицательные
+        числа. Если массив пуст или имеет одно значение, верните ноль. Изначально, массив будет подан в неотсортированном виде. </div>
+    <script>
+        function maxDiff(arr) {
+            if (arr.length <= 1) return 0;
+            return Math.abs(arr.sort((a, b) => a - b)[0] -
+                arr.sort((a, b) => a - b)[arr.length - 1]);
+        }
+
+        //Проверка
+        alert(maxDiff([0, 1, 2, 3, 4, 5, 6]));
+        alert(maxDiff([-0, 1, 2, -3, 4, 5, -6]));
+        alert(maxDiff([0, 1, 2, 3, 4, 5, 16]));
+        alert(maxDiff([16]));
+        alert(maxDiff([]));
+    </script>
+</body>
+
+</html>

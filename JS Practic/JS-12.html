@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-12</title>
+</head>
+
+<body>
+    <h2>Практика JS 12</h2>
+
+    <div>
+        Завершите функцию, которая принимает два целых числа ( a, b, где a больше b) и возвращает массив всех целых чисел между входными параметрами, включая их. </div>
+    <script>
+        "use strict";
+        let a, b;
+
+        function between(first, last) {
+            let arr = [];
+            for (let i = first; i <= last; i++) {
+                arr.push(i);
+            }
+            return arr;
+        }
+        do {
+            a = prompt('Введите начальное значение: ');
+            b = prompt('Введите конечное значение: ');
+            if (a == null || b == null) break;
+        }
+        while (a >= b);
+        alert(between(a, b));
+    </script>
+</body>
+
+</html>

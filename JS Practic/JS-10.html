@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-10</title>
+</head>
+
+<body>
+    <h2>Практика JS 10</h2>
+
+    <div>
+        Напишите функцию, которая будет принимать в себя массив c именами, и возвращать массив, но уже с удаленными нежелательными именами. Массив с нежелательными именами должен быть внутри вашей функции: const unwantedNames = [“Дима”, “Саша”, ”Ольга”, ‘Никита”].
+    </div>
+    <script>
+        function deleteNames(arr) {
+            const unwantedNames = ['Дима', 'Саша', 'Ольга', 'Никита'];
+            for (let unwantedName of unwantedNames) {
+                for (let i = 0; i < arr.length; ++i) {
+                    if (arr[i] == unwantedName) {
+                        arr.splice(i, 1);
+                    }
+                }
+            }
+            return arr;
+        }
+        let arr = ['Алексей', 'Семён', 'Василиса', 'Дима', 'Максим', 'Ольга'];
+        alert(deleteNames(arr));
+    </script>
+</body>
+
+</html>
